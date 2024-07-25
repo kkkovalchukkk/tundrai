@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Actay';
+    font-weight: 400;
+    font-style: normal;
+    src: url("./Actay-Regular.otf");
+}
+
+@font-face {
+    font-family: 'Actay';
+    font-weight: 400;
+    font-style: italic;
+    src: url("./Actay-RegularItalic.otf");
+}
+
+@font-face {
+    font-family: 'Actay';
+    font-weight: 700;
+    font-style: normal;
+    src: url("./ActayWide-Bold.otf");
+}
+
+@font-face {
+    font-family: 'Actay';
+    font-weight: 700;
+    font-style: italic;
+    src: url("./ActayWide-BoldItalic.otf");
+}
