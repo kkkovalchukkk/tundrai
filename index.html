@@ -12,6 +12,25 @@
 
 <body>
     <div class="page">
+        <div class="overlay">
+            <div class="mobile-menu">
+                <nav class="mobile-menu__nav">
+                    <a href="#center" class="mobile-menu__nav-link">
+                        О проекте
+                    </a>
+                    <a href="#expert" class="mobile-menu__nav-link">
+                        Эксперты
+                    </a>
+                    <a href="#" class="mobile-menu__nav-link">
+                        info@rus-dservice.ru
+                    </a>
+                    <a href="#footer" class="btn mobile-menu__nav-link mobile-menu__nav-link_btn">
+                        Стать частью проекта
+                    </a>
+                </nav>
+            </div>
+        </div>
+
         <header class="header header_fixed">
             <div class="header__main-content">
                 <a href="./index.html" class="header__logo-link">
@@ -113,6 +132,21 @@
             <a href="#footer" class="btn header__main-btn">
                 Стать частью проекта
             </a>
+            <button class="header__burger-btn">
+                <svg class="burger" width="154" height="54" viewBox="0 0 154 54" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.449219" y="0.219757" width="153.519" height="5.8186" fill="white" />
+                    <rect x="55.498" y="24.0907" width="98.4693" height="5.8186" fill="white" />
+                    <rect x="0.449219" y="47.9616" width="153.519" height="5.8186" fill="white" />
+                </svg>
+                <svg class="close" width="44" height="43" viewBox="0 0 44 43" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.46484" y="41.2147" width="57.9584" height="2.19672"
+                        transform="rotate(-45 1.46484 41.2147)" fill="white" />
+                    <rect x="2.37305" y="0.231934" width="57.9584" height="2.19672"
+                        transform="rotate(45 2.37305 0.231934)" fill="white" />
+                </svg>
+            </button>
         </header>
         <main class="main">
             <section class="promo-section">
@@ -384,6 +418,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                     <button class="swiper-right-btn">
                         <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -410,6 +445,37 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+
+
+
+        const overlayEl = document.querySelector('.overlay');
+        const headerBurgerBtn = document.querySelector('.header__burger-btn')
+        const overlayNavLinkEls = document.querySelectorAll('.mobile-menu__nav-link')
+
+
+        const offScroll = () => document.documentElement.classList.add('no-scroll');
+        const onScroll = () => document.documentElement.classList.remove('no-scroll')
+
+        headerBurgerBtn.addEventListener('click', () => {
+            if (overlayEl.classList.contains('overlay_active')) {
+                onScroll();
+                overlayEl.classList.remove('overlay_active')
+                headerBurgerBtn.classList.remove('header__burger-btn_active')
+            } else {
+                offScroll();
+                overlayEl.classList.add('overlay_active')
+                headerBurgerBtn.classList.add('header__burger-btn_active')
+            }
+        })
+
+        overlayNavLinkEls.forEach(l => l.addEventListener('click', () => {
+            onScroll();
+            overlayEl.classList.remove('overlay_active')
+            headerBurgerBtn.classList.remove('header__burger-btn_active')
+        }))
+
+
+
         const headerEl = document.querySelector('header')
         window.addEventListener('scroll', () => {
             if (window.pageYOffset >= 200) {
@@ -426,6 +492,31 @@
             spaceBetween: 146.03,
             navigation: {
                 nextEl: '.swiper-right-btn'
+            },
+            breakpoints: {
+                1540: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 146.03,
+
+                },
+                960: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 146.03,
+                },
+                921: {
+                    slidesPerView: 1.45,
+                    spaceBetween: 64,
+                },
+
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    },
+                    allowTouchMove: true,
+
+                }
             }
         });
 
@@ -434,7 +525,7 @@
             const slidesCount = expertSwiper.slides.length;
 
             // Проверяем, если текущий слайд предпоследний
-            if (activeIndex === slidesCount - 2) {
+            if (activeIndex === slidesCount - 2 && window.innerWidth >= 920) {
                 expertSwiper.slideTo(0, 600); // Второй аргумент - скорость переключения (600 мс)
             }
         });

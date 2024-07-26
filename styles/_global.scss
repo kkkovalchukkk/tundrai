@@ -1,8 +1,12 @@
 html,
 body {
+  position: relative;
   width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 body {
