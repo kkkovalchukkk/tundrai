@@ -15,13 +15,16 @@
         <div class="overlay">
             <div class="mobile-menu">
                 <nav class="mobile-menu__nav">
+                    <a href="./index.html" class="mobile-menu__nav-link">
+                        Главная
+                    </a>
                     <a href="#center" class="mobile-menu__nav-link">
                         О проекте
                     </a>
                     <a href="#expert" class="mobile-menu__nav-link">
                         Эксперты
                     </a>
-                    <a href="#" class="mobile-menu__nav-link">
+                    <a href="mailto:info@rus-dservice.ru" class="mobile-menu__nav-link">
                         info@rus-dservice.ru
                     </a>
                     <a href="#footer" class="btn mobile-menu__nav-link mobile-menu__nav-link_btn">
@@ -133,18 +136,40 @@
                 Стать частью проекта
             </a>
             <button class="header__burger-btn">
-                <svg class="burger" width="154" height="54" viewBox="0 0 154 54" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.449219" y="0.219757" width="153.519" height="5.8186" fill="white" />
-                    <rect x="55.498" y="24.0907" width="98.4693" height="5.8186" fill="white" />
-                    <rect x="0.449219" y="47.9616" width="153.519" height="5.8186" fill="white" />
+                <svg class="burger" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+                        </style>
+                    </defs>
+                    <title />
+                    <g data-name="Layer 2" id="Layer_2">
+                        <path d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z" />
+                        <path d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" />
+                        <path d="M28,24H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" />
+                    </g>
+                    <g id="frame">
+                        <rect class="cls-1" height="32" width="32" />
+                    </g>
                 </svg>
-                <svg class="close" width="44" height="43" viewBox="0 0 44 43" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect x="1.46484" y="41.2147" width="57.9584" height="2.19672"
-                        transform="rotate(-45 1.46484 41.2147)" fill="white" />
-                    <rect x="2.37305" y="0.231934" width="57.9584" height="2.19672"
-                        transform="rotate(45 2.37305 0.231934)" fill="white" />
+                <svg class="close" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24"
+                    xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <style type="text/css">
+                        .st0 {
+                            opacity: 0.2;
+                            fill: none;
+                            stroke: #000000;
+                            stroke-width: 5.000000e-02;
+                            stroke-miterlimit: 10;
+                        }
+                    </style>
+                    <g id="grid_system" />
+                    <g id="_icons">
+                        <path
+                            d="M5.3,18.7C5.5,18.9,5.7,19,6,19s0.5-0.1,0.7-0.3l5.3-5.3l5.3,5.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3   c0.4-0.4,0.4-1,0-1.4L13.4,12l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L12,10.6L6.7,5.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4   l5.3,5.3l-5.3,5.3C4.9,17.7,4.9,18.3,5.3,18.7z" />
+                    </g>
                 </svg>
             </button>
         </header>
@@ -418,7 +443,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="expert-section__swiper-navigation">
+                        <button class="swiper-left-btn">
+                            <svg width="14" height="23" viewBox="0 0 14 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.7023 12.639C13.288 12.0532 13.288 11.1035 12.7023 10.5177L3.15632 0.971767C2.57053 0.385981 1.62079 0.385981 1.035 0.971767C0.449213 1.55755 0.449213 2.5073 1.035 3.09309L9.52028 11.5784L1.035 20.0637C0.449213 20.6494 0.449213 21.5992 1.035 22.185C1.62079 22.7708 2.57053 22.7708 3.15632 22.185L12.7023 12.639ZM9.69336 13.0784H11.6416V10.0784H9.69336V13.0784Z"
+                                    fill="#7D96FF" />
+                            </svg>
+                        </button>
+                        <button class="swiper-right-btn">
+                            <svg width="14" height="23" viewBox="0 0 14 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.7023 12.639C13.288 12.0532 13.288 11.1035 12.7023 10.5177L3.15632 0.971767C2.57053 0.385981 1.62079 0.385981 1.035 0.971767C0.449213 1.55755 0.449213 2.5073 1.035 3.09309L9.52028 11.5784L1.035 20.0637C0.449213 20.6494 0.449213 21.5992 1.035 22.185C1.62079 22.7708 2.57053 22.7708 3.15632 22.185L12.7023 12.639ZM9.69336 13.0784H11.6416V10.0784H9.69336V13.0784Z"
+                                    fill="#7D96FF" />
+                            </svg>
+                        </button>
+                    </div>
                     <button class="swiper-right-btn">
                         <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -491,7 +533,8 @@
             allowTouchMove: false,
             spaceBetween: 146.03,
             navigation: {
-                nextEl: '.swiper-right-btn'
+                prevEl: '.swiper-left-btn',
+                nextEl: '.swiper-right-btn',
             },
             breakpoints: {
                 1540: {

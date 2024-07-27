@@ -350,6 +350,10 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .promo-section__mouse-icon {
   position: absolute;
@@ -525,6 +529,9 @@ p {
 .expert-section__swiper {
   position: relative;
   width: 100%;
+}
+.expert-section__swiper-navigation {
+  display: none;
 }
 .expert-section .swiper-right-btn {
   position: absolute;
@@ -1047,7 +1054,7 @@ p {
   }
   .header__burger-btn {
     position: relative;
-    width: 92px;
+    width: 32px;
     height: 32px;
     display: initial;
     background-color: transparent;
@@ -1064,6 +1071,7 @@ p {
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+    fill: #fff;
   }
   .header__burger-btn .close {
     right: 0;
@@ -1088,7 +1096,11 @@ p {
     left: 32px;
     height: calc(100% - 72px);
   }
+  .promo-section__mouse-icon {
+    display: none;
+  }
   .center-section {
+    padding-top: 120px;
     padding-left: 32px;
     padding-right: 32px;
     display: flex;
@@ -1120,6 +1132,7 @@ p {
   .expert-section {
     padding-left: 32px;
     padding-right: 32px;
+    padding-top: 120px;
   }
   .expert-section__slide {
     gap: 24px;
@@ -1155,9 +1168,6 @@ p {
     width: 100%;
     height: 450px;
   }
-  .expert-section__swiper {
-    padding-bottom: 84px;
-  }
   .expert-section__swiper .swiper-pagination-bullet {
     width: 32px;
     height: 32px;
@@ -1167,8 +1177,62 @@ p {
   .expert-section__swiper .swiper-pagination-bullet-active {
     background-color: #7d96ff;
   }
-  .expert-section .swiper-right-btn {
+  .expert-section__swiper .swiper-right-btn {
     display: none;
+  }
+  .expert-section__swiper-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+  }
+  .expert-section__swiper-navigation .swiper-button-disabled {
+    opacity: 0.3;
+  }
+  .expert-section__swiper-navigation .swiper-left-btn {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7d96ff;
+    background: none;
+    transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  .expert-section__swiper-navigation .swiper-left-btn:hover {
+    background-color: #7d96ff;
+  }
+  .expert-section__swiper-navigation .swiper-left-btn:hover path {
+    fill: white;
+  }
+  .expert-section__swiper-navigation .swiper-left-btn:active {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+  }
+  .expert-section__swiper-navigation .swiper-left-btn svg {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  .expert-section__swiper-navigation .swiper-right-btn {
+    position: static;
+    display: initial;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
   }
 }
 @media (max-width: 768px) {

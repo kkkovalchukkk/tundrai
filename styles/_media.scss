@@ -356,7 +356,7 @@
     }
     &__burger-btn {
       position: relative;
-      width: 92px;
+      width: 32px;
       height: 32px;
       display: initial;
       background-color: transparent;
@@ -372,6 +372,7 @@
         -moz-transition: $defTransitionTime;
         -ms-transition: $defTransitionTime;
         -o-transition: $defTransitionTime;
+        fill: #fff;
       }
       .close {
         right: 0;
@@ -402,9 +403,13 @@
       left: 32px;
       height: calc(100% - 72px);
     }
+    &__mouse-icon {
+      display: none;
+    }
   }
 
   .center-section {
+    padding-top: 120px;
     padding-left: 32px;
     padding-right: 32px;
     display: flex;
@@ -442,6 +447,7 @@
   .expert-section {
     padding-left: 32px;
     padding-right: 32px;
+    padding-top: 120px;
     &__slide {
       gap: 24px;
       &-heading {
@@ -485,7 +491,6 @@
   }
   .expert-section {
     &__swiper {
-      padding-bottom: 84px;
       .swiper-pagination-bullet {
         width: 32px;
         height: 32px;
@@ -495,9 +500,67 @@
           background-color: $first;
         }
       }
-    }
-    .swiper-right-btn {
-      display: none;
+      .swiper-right-btn {
+        display: none;
+      }
+      &-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        margin-top: 32px;
+        .swiper-button-disabled {
+          opacity: 0.3;
+        }
+        .swiper-left-btn {
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #7d96ff;
+          background: none;
+          transition: $defTransitionTime;
+          -webkit-transition: $defTransitionTime;
+          -moz-transition: $defTransitionTime;
+          -ms-transition: $defTransitionTime;
+          -o-transition: $defTransitionTime;
+          &:hover {
+            background-color: $first;
+            path {
+              fill: white;
+            }
+          }
+          &:active {
+            transform: scale(0.95);
+            -webkit-transform: scale(0.95);
+            -moz-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+            -o-transform: scale(0.95);
+          }
+          svg {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+          }
+          transition: $defTransitionTime;
+          -webkit-transition: $defTransitionTime;
+          -moz-transition: $defTransitionTime;
+          -ms-transition: $defTransitionTime;
+          -o-transition: $defTransitionTime;
+        }
+        .swiper-right-btn {
+          position: static;
+          display: initial;
+          transition: $defTransitionTime;
+          -webkit-transition: $defTransitionTime;
+          -moz-transition: $defTransitionTime;
+          -ms-transition: $defTransitionTime;
+          -o-transition: $defTransitionTime;
+        }
+      }
     }
   }
 }
@@ -724,6 +787,9 @@
         height: 100%;
       }
     }
+  }
+
+  .expert-section {
   }
 
   .footer {

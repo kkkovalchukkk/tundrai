@@ -184,6 +184,8 @@ p {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    user-select: none;
+    pointer-events: none;
   }
 
   &__mouse-icon {
@@ -373,6 +375,9 @@ p {
   &__swiper {
     position: relative;
     width: 100%;
+    &-navigation {
+      display: none;
+    }
   }
 
   .swiper-right-btn {
